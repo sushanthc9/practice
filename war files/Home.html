@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>abc E-Recruitment</title>
+
+
+
+<script type="text/javascript">	
+function disp1()
+{
+	var spanobj01=document.getElementById("errspan01");
+	spanobj01.innerHTML="";
+}
+
+
+
+function validate1()
+{
+	
+	var o = document.getElementById('one');
+	var t = document.getElementById('two');
+	
+	if (document.demo.empid.value=="")
+	{
+		var spanobj01=document.getElementById("errspan01");
+		spanobj01.innerHTML="Enter employee id";
+		return false;     			
+	}
+	if (document.demo.empid.value < 1000 || document.demo.empid.value > 9999999)
+	{
+		var spanobj01=document.getElementById("errspan01");
+		spanobj01.innerHTML="Enter correct Employee ID";
+		return false;				
+	}
+	
+	if (document.demo.empid.value.length < 4 || document.demo.empid.value.length > 7)
+	{
+		var spanobj01=document.getElementById("errspan01");
+		spanobj01.innerHTML="Enter correct Employee ID";
+		return false;				
+	}
+return true;
+}
+
+function ValidateAlpha(evt)
+{
+    var keyCode = (evt.which) ? evt.which : evt.keyCode
+    if ((keyCode < 65 || keyCode > 90) && (keyCode < 97 || keyCode > 123) && keyCode != 32 && keyCode != 13)
+{
+	alert("Enter Alphabets"); 
+		    return false;
+}
+        return true;
+}       
+function isNumberKey(evt)
+{
+  	var charCode = (evt.which) ? evt.which : event.keyCode
+ if((charCode > 31 && (charCode < 48 || charCode > 57)))
+{
+alert("Enter Numbers Only!");
+return false;
+}
+return true;
+}
+
+
+
+	
+   function checking()
+  { 
+	var u,p; 
+    	u=document.getElementById("uid");
+  	p=document.getElementById("pwd");
+   	
+	if(u.value==""||p.value=="")
+ 		   alert("Please Enter Uid,Password ")
+
+     	if(u.value=="hr"&&p.value=="hr")
+	{
+		var formObj1 = document.getElementById("loginForm");
+     		 formObj1.action="hrMainHome.html";
+		formObj1.submit();
+	}
+
+	if(u.value=="uh"&&p.value=="uh")
+	{
+		var formObj = document.getElementById("loginForm");
+     		 formObj.action="uhMainHome.html";
+		formObj.submit();
+	}
+
+	if(u.value=="ta"&&p.value=="ta")
+	{
+		var formObj2 = document.getElementById("loginForm");
+     		 formObj2.action="testadmin_home.html";
+		formObj2.submit();
+	}      	
+	
+	if(u.value=="emp"&&p.value=="emp")
+	{
+		var formObj3 = document.getElementById("loginForm");
+     		 formObj3.action="emp_home.html";
+		formObj3.submit();
+	}        	
+	
+	if(u.value=="pc"&&p.value=="pc")
+	{
+		var formObj4 = document.getElementById("loginForm");
+     		 formObj4.action="pchome.html";
+		formObj4.submit();
+	}        	
+ }
+
+
+</script>
+
+   <style type="text/css">
+ fieldset
+  {
+    border-color:grey;
+    
+  }
+  body
+  {
+    
+    overflow-x:hidden;
+    }
+</style>
+
+
+
+</head>
+<body onLoad="imagechanger();" background="bck1.jpg" >
+
+
+<table width="100%">
+<tr>
+   <td width="50%" >
+    <div style="positon:absolute;top:0;left:10%;width=100%">
+    <img src="logo.png" style="width:40%" />
+    </div>
+   </td>
+   
+
+      <td colspan="4" width="100%"><div style="position:absolute;top:0;left:20.5%;width:150%">
+      <img id="image" width="1060" height="275" />
+      </div>
+  </td>
+   
+</tr>
+ 
+ <table bgcolor="#33CCFF" width="100%">
+  <tr>
+    <td width="100"><a href="Home.html" target="_self"><font size="4" color="black">Home</font></a></td>
+    <td width="200"><a href="PlacementConsultants.html" target="_self"> <font size="3" color="black"> Placement Consultants</font></a></td>
+    <td width="180"><a href="tests.html" target="_self"> <font size="4" color="black">Selection Process</font></a></td>
+    <td width="100"><a href="About.html" target="_self"> <font size="4" color="black">About us</font></a></td>
+    <td width="500"><a href="contactus.html" target="_self"> <font size="4" color="black">Contact us</font></a></td>
+    <td>Search</td>
+    <td><input type="text" placeholder="search for job"/>
+  </tr>
+</table>
+
+
+
+</table>
+<script type="text/javascript">
+var current=1;
+        var total=4;
+        var time;
+        function imagechanger()
+         {
+        	document.getElementById("image").src="image"+current+".jpg";
+           time=setInterval(function(){changeImage()},2500);
+         }
+        function changeImage()
+        {
+	  
+          current++;
+          if(current>total)
+              current=1;
+            document.getElementById("image").src="image"+current+".jpg";
+	    
+		
+         }
+</script>
+<br>
+
+<table width="100%">
+<tr>
+   <td width="1050">
+      <form style="width:800">
+      <fieldset>
+       <legend><font color="#33CCFF" size="5">Walk-in Zone</font>
+        </legend>
+        <br>
+        <table>
+        <tr align="left">
+        <td>
+       <ul type="disc">
+       <li><font size="4"> Apply for <u>Assistant System Engineer</u> Position<br>&nbsp;&nbsp;<font color="green" size="2">Eligibility:<i>BE/B.tech(CSE,IT)</i></font>&nbsp;&nbsp;&nbsp; <font color="red" size="2">Last Date:<i>10-feb-                        2014</i></font></li><br>
+       <li><font size="4"> Apply for <u>Software Developer</u> Position<br>&nbsp;&nbsp;<font color="green" size="2">Eligibility:<i>BE/B.tech(CSE,ECE,IT)</i></font>&nbsp;&nbsp;&nbsp; <font color="red" size="2">Last Date:<i>12-feb-                        2014</i></font></li><br>
+
+       <li><font size="4"> Apply for <u>Software Engineer</u> Position<br>&nbsp; &nbsp;<font color="green" size="2">Eligibility:<i>MCA(computer)</i></font>&nbsp;&nbsp;&nbsp; <font color="red" size="2">Last Date:<i>09-feb-                        2014</i></font></li><br>
+
+       
+       <li><font size="4"> Apply for <u>Assistant Data Specialist</u> Position<br>&nbsp;&nbsp;<font color="green" size="2">Eligibility:<i>MCA, BE/B.tech</i></font>&nbsp;&nbsp;&nbsp; <font color="red" size="2">Last Date:<i>15-feb-                        2014</i></font></li>
+   
+     </ul>
+   </td>
+   </tr>
+ </table>
+</fieldset>
+</form>
+  <td>
+      
+     <form name="loginform" id="loginForm" action="controller?name=login" method="post">
+      <fieldset>
+      <legend><font color="#33CCFF" size="5">login here</font></legend>
+     <table align="right">
+       <tr>
+          
+          <td>User Id</td> 
+          <td><input type="text"  name="userid" id="uid"onkeypress="return isNumberKey(event)" onFocus="disp1()"/></pre><span id="errspan01"></span></td>
+        </tr>
+        <tr><td></td></tr>
+       <tr>
+        <td>Password</td>
+         <td><input type="password" name="password" id="pwd"/></td>
+       </tr>
+	<tr><td></td></tr>
+	<tr><td></td></tr>
+	<tr><td></td></tr>
+       <tr>
+          <td><input type="submit" value="login" name="login" onClick="checking()"></td>
+          <td bgcolor="#33CCFF">If you Forgot your Password, Contact Admin</td>
+       </tr>
+       <tr></tr>
+      
+      </table>
+     
+     </fieldset>
+     </form>
+  </td>
+  
+</table>
+
+<center>
+<div id="footer" style="color:green">
+
+© 2013-2014 abc Consultancy Services Limited. All Rights Reserved
+
+</div>
+</center>
+</body>
+</html>
